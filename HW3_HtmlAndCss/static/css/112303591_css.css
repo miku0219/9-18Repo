@@ -68,7 +68,17 @@ ul li ul li {
     clear: both;
     width: 100%;
 }
-h1 {
+
+header {
     text-align: center;
-    
+    font-weight: bold;
+    color: rgb(209, 24, 215);
+}
+
+body {
+    background-color: bisque;
+}
+body div {
+    margin-top: 96px;
+    margin-left: 15%;
 }
