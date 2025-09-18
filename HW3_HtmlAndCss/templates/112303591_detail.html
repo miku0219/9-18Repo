@@ -12,8 +12,41 @@
     </ul>
     <a href=""></a>
     <iframe></iframe>
-    <form>
-        
+    <form action="" method="">
+        <label class="title">回饋表單</label><br>
+        <br>
+        <label>姓名：</label><br>
+        <input type="text"><input type="checkbox"><label>匿名</label><br>
+        <br>
+        <label for="select1">你是從哪裡知道這個網站的？</label><br>
+        <select name="select1" id="select1">
+            <option value="選項一">--請選擇--</option>
+            <option value="選項二">FB</option>
+            <option value="選項三">IG</option>
+        </select><br>
+        <br>
+        <label>你最喜歡的休閒活動：</label><br>
+        <input type="radio" id="sport" name="fav" value="sport">
+        <label for="sport">運動</label><br>
+        <input type="radio" id="music" name="fav" value="music">
+        <label for="music">音樂</label><br>
+        <input type="radio" id="learn" name="fav" value="learn">
+        <label for="learn">閱讀</label><br>
+        <br>
+        <label>你最喜歡的音樂類型(可複選)：</label><br>
+        <input type="checkbox" id="流行" name="fav_music" value="流行">
+        <label for="流行">流行</label><br>
+        <input type="checkbox" id="搖滾" name="fav_music" value="搖滾">
+        <label for="搖滾">搖滾</label><br>
+        <input type="checkbox" id="古典" name="fav_music" value="古典">
+        <label for="古典">古典</label><br>
+        <input type="checkbox" id="爵士" name="fav_music" value="爵士">
+        <label for="爵士">爵士</label><br>
+        <br>
+        <label>備註：</label><br>
+        <textarea name="message" rows="10" cols="30"></textarea><br>
+        <br>
+        <input type="submit" value="送出留言">
     </form>
 </body>
 </html>
