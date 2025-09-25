@@ -12,5 +12,6 @@ function Guess() {
     N++;
     alert("猜對了，總共用了" + N + "次。");
     GNum = Math.floor(Math.random() * 100);
+    N = 0;
   }
 }
