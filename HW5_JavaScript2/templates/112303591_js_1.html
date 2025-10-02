@@ -9,10 +9,10 @@
 
     <body>
         <h1>猜數字遊戲</h1>
-        <div id="guessresult"><p>猜0~100之間的整數：</p></div>
-        <input type="text" id="guess" value=""> <input type="button" onclick="Guess()" value="猜">
-        <div class="gettime"></div>
-        <div class="guesslist">
+        <div id="guessResult">猜0~100之間的整數：</div><br>
+        <input type="text" id="guess" value=""> <button id="GB" onclick="startG();Guess()">猜</button>
+        <p>時間：<span id="getTime">0</span>秒</p>
+        <div class="guessList">
 
         </div>
     </body>
