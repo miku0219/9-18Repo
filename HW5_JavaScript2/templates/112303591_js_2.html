@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8" />
+    <meta charset="utf-8">
     <title>購物車</title>
-    <link rel="stylesheet" href="../static/css/112303591_js_2.css" />
+    <link rel="stylesheet" href="../static/css/112303591_js_2.css">
   </head>
   <body>
     <h1>購物車</h1>
@@ -11,7 +11,7 @@
       <thead>
         <tr style="height: 40px">
           <th width="150">
-            <input type="checkbox" id="selectAll" onclick="CheckAll()" />
+            <input type="checkbox" id="selectAll" onclick="CheckAll(this)">
           </th>
           <th width="250">商品名稱</th>
           <th width="200">商品庫存</th>
@@ -22,56 +22,41 @@
       </thead>
       <tbody>
         <tr style="height: 160px">
-          <td><input type="checkbox" class="item" id="conduct1" /></td>
+          <td><input type="checkbox" class="item" id="product1" onclick="updateCheckAll()"></td>
           <td>
-            <img src="../static/img/初始衣裝飯友.jpg" alt="初始衣裝飯友" />
+            <img src="../static/img/初始衣裝飯友.jpg" alt="初始衣裝飯友">
             <p style="font-size: 20px; margin: 0">【子午計畫】初始衣裝飯友</p>
           </td>
           <td><p>500</p></td>
           <td><p>$200</p></td>
           <td>
-            <input type="button" class="btn" value="-" /><input type="text" class="num" value="0"><input type="button" class="btn" value="+" />
+            <input type="button" class="btn" value="-"><input type="text" class="num" value="0"><input type="button" class="btn" value="+">
           </td>
           <td><p>$0</p></td>
         </tr>
         <tr style="height: 160px">
-          <td><input type="checkbox" class="item" id="conduct2" /></td>
+          <td><input type="checkbox" class="item" id="product2" onclick="updateCheckAll()"></td>
           <td>
-            <img src="../static/img/子午後背包.jpg" alt="子午後背包" />
+            <img src="../static/img/子午後背包.jpg" alt="子午後背包">
             <p style="font-size: 20px; margin: 0">【子午計畫】子午後背包</p>
           </td>
           <td><p>200</p></td>
           <td><p>$1200</p></td>
           <td>
-            <input type="button" class="btn" value="-" /><input
-              type="text"
-              class="num"
-              id=""
-              value="0"
-            /><input type="button" class="btn" value="+" />
+            <input type="button" class="btn" id="cut" value="-"><input type="text" class="num" id="quantity" value="0"><input type="button" class="btn" id="add" value="+">
           </td>
           <td><p>$0</p></td>
         </tr>
         <tr style="height: 160px">
-          <td><input type="checkbox" class="item" id="conduct3" /></td>
+          <td><input type="checkbox" class="item" id="product3" onclick="updateCheckAll()"></td>
           <td>
-            <img src="../static/img/KSP娃娃.jpg" alt="KSP娃娃" />
+            <img src="../static/img/KSP娃娃.jpg" alt="KSP娃娃">
             <p style="font-size: 20px; margin: 0">【KSP】KSP娃娃</p>
           </td>
           <td><p>150</p></td>
           <td><p>$750</p></td>
           <td>
-            <input
-              type="button"
-              class="btn"
-              onclick="changeValue()"
-              value="-"
-            /><input type="text" class="num" value="0" /><input
-              type="button"
-              class="btn"
-              onclick="changeValue()"
-              value="+"
-            />
+            <input type="button" class="btn" value="-"><input type="text" class="num" value="0"><input type="button" class="btn" value="+">
           </td>
           <td><p>$0</p></td>
         </tr>
@@ -81,7 +66,7 @@
         </tr>
       </tbody>
     </table>
-    <input type="button" class="buy" value="結帳" />
+    <input type="button" class="buy" value="結帳">
     <script src="../static/js/112303591_js_2.js"></script>
   </body>
 </html>
