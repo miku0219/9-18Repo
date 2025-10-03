@@ -1,7 +1,3 @@
-const Add = document.getElementById("add");
-const Cut = document.getElementById("cut");
-const Quantity = document.getElementById("quantity");
-
 const SelectAll = document.getElementById("selectAll");
 const CheckBoxes = document.querySelectorAll(".item");
 
@@ -20,4 +16,39 @@ function updateCheckAll() {
     }
   }
   checkAll.checked = allChecked;
+}
+
+function increase(inputID, pID) {
+  const input = document.getElementById(inputID);
+  const Have = document.getElementById(pID);
+  let num = parseInt(Have.textContent);
+  let value = parseInt(input.value) || 0;
+  if (input.value < num && input.value >= 1) {
+    input.value = value + 1;
+  } else {
+    input.value = num;
+  }
+}
+
+function decrease(inputID, pID) {
+  const input = document.getElementById(inputID);
+  const Have = document.getElementById(pID);
+  let num = parseInt(Have.textContent);
+  let value = parseInt(input.value) || 0;
+  if (input.value > 1 && input.value <= num) {
+    input.value = value - 1;
+  } else {
+    input.value = 1;
+  }
+}
+
+function checkEnter(event, inputElement, pID) {
+  const Have = document.getElementById(pID);
+  let num = parseInt(Have.textContent);
+  if (event.key === "Enter") {
+    let value = parseInt(inputElement.value);
+    if (isNaN(value) || value < 1 || value > num) {
+      inputElement.value = 1;
+    }
+  }
 }

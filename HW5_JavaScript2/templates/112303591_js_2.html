@@ -27,12 +27,12 @@
             <img src="../static/img/初始衣裝飯友.jpg" alt="初始衣裝飯友">
             <p style="font-size: 20px; margin: 0">【子午計畫】初始衣裝飯友</p>
           </td>
-          <td><p>500</p></td>
-          <td><p>$200</p></td>
+          <td><p id="have1">500</p></td>
+          <td>$<span id="price1">200</span></td>
           <td>
-            <input type="button" class="btn" value="-"><input type="text" class="num" value="0"><input type="button" class="btn" value="+">
+            <input type="button" class="btn" onclick="decrease('quantity1','have1')" value="-"><input type="text" class="num" id="quantity1" onkeydown="checkEnter(event, this, 'have1')" value="1"><input type="button" class="btn" onclick="increase('quantity1','have1')" value="+">
           </td>
-          <td><p>$0</p></td>
+          <td><p id="pay1">$0</p></td>
         </tr>
         <tr style="height: 160px">
           <td><input type="checkbox" class="item" id="product2" onclick="updateCheckAll()"></td>
@@ -40,12 +40,12 @@
             <img src="../static/img/子午後背包.jpg" alt="子午後背包">
             <p style="font-size: 20px; margin: 0">【子午計畫】子午後背包</p>
           </td>
-          <td><p>200</p></td>
-          <td><p>$1200</p></td>
+          <td><p id="have2">200</p></td>
+          <td>$<span id="price2">1200</span></td>
           <td>
-            <input type="button" class="btn" id="cut" value="-"><input type="text" class="num" id="quantity" value="0"><input type="button" class="btn" id="add" value="+">
+            <input type="button" class="btn" onclick="decrease('quantity2','have2')" value="-"><input type="text" class="num" id="quantity2" onkeydown="checkEnter(event, this, 'have2')" value="1"><input type="button" class="btn" onclick="increase('quantity2','have2')" value="+">
           </td>
-          <td><p>$0</p></td>
+          <td><p id="pay2">$0</p></td>
         </tr>
         <tr style="height: 160px">
           <td><input type="checkbox" class="item" id="product3" onclick="updateCheckAll()"></td>
@@ -53,16 +53,16 @@
             <img src="../static/img/KSP娃娃.jpg" alt="KSP娃娃">
             <p style="font-size: 20px; margin: 0">【KSP】KSP娃娃</p>
           </td>
-          <td><p>150</p></td>
-          <td><p>$750</p></td>
+          <td><p id="have3">150</p></td>
+          <td>$<span id="price3">750</span></td>
           <td>
-            <input type="button" class="btn" value="-"><input type="text" class="num" value="0"><input type="button" class="btn" value="+">
+            <input type="button" class="btn" onclick="decrease('quantity3','have3')" value="-"><input type="text" class="num" id="quantity3" onkeydown="checkEnter(event, this, 'have3')" value="1"><input type="button" class="btn" onclick="increase('quantity3','have3')" value="+">
           </td>
-          <td><p>$0</p></td>
+          <td><p id="pay3">$0</p></td>
         </tr>
         <tr style="height: 60px">
           <td colspan="5">total</td>
-          <td><p>$0</p></td>
+          <td><p id="total">$0</p></td>
         </tr>
       </tbody>
     </table>
