@@ -44,8 +44,10 @@ def Gender(num):
         return '男性'
     elif num == '2':
         return '女性'
-    elif num in ('8', '9'):
-        return '居留證'
+    elif num == '8':
+        return '居留證-男性'
+    elif num == '9':
+        return '居留證-女性'
     return '未知'
 
 #取得國籍
@@ -99,25 +101,6 @@ updated_rows = cursor.fetchall()
 print("✔ 剩餘正確身份證字號與資料：\n")
 for row in updated_rows:
     print(f'{row[0]}：{row[1]} {row[2]} {row[3]}')
-
-# 查詢功能
-def query_id(id_input):
-    id_input = id_input.strip().upper()
-    if not re.match(r'^[A-Z][1289][0-9]{8}$', id_input):
-        return "❌ 格式錯誤，請重新輸入"
-    if not is_valid_id(id_input):
-        return "❌ 此身份證字號為假，請重新輸入"
-    letter = id_input[0]
-    county = County(letter)
-    gender = Gender(id_input[1])
-    citizenship = Citizenship(id_input[2])
-    return f'{id_input}：{county} {gender} {citizenship}'
-
-# 查詢測試
-print("\n🔍 查詢範例：")
-print(query_id("A123456789"))
-print(query_id("N126807298"))
-print(query_id("D123456789"))
 
 cursor.close()
 conn.close()
