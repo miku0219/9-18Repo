@@ -102,5 +102,16 @@ print("✔ 剩餘正確身份證字號與資料：\n")
 for row in updated_rows:
     print(f'{row[0]}：{row[1]} {row[2]} {row[3]}')
 
+while True:
+    ID = input('\n輸入身分證字號(q為離開)：')
+    if ID == 'q':
+        print("結束查詢")
+        break
+    elif not re.match(r'^[A-Z][1289][0-9]{8}$', ID):
+        print("請重新輸入")
+    else:
+        print(ID + " " + County(ID[0]) + " " + Gender(ID[1]) + " " + Citizenship(ID[2]))
+        
+
 cursor.close()
 conn.close()
