@@ -109,6 +109,8 @@ while True:
         break
     elif not re.match(r'^[A-Z][1289][0-9]{8}$', ID):
         print("請重新輸入")
+    elif not is_valid_id(ID):
+        print("請重新輸入")
     else:
         print(ID + " " + County(ID[0]) + " " + Gender(ID[1]) + " " + Citizenship(ID[2]))
         
